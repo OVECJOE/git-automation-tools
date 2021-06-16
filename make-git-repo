@@ -1,0 +1,16 @@
+#!/bin/bash
+# create the directory for the repo and enter directory.
+mkdir $1; cd $1
+
+# initialize git
+git init
+
+echo "Enter the remote repo's url:"
+read URL
+git remote add origin $URL
+
+echo "$1" > README.md
+echo "commit message"; read MSG
+git add .; git commit -m "$MSG"
+
+git push -u origin master
