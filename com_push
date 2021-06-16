@@ -4,7 +4,7 @@
 
 # $1 - the first argument: the path to the working directory of the repo.
 # $2 - the second argument: message to commit.
-
+rm -f *~
 cd $1
 
 git update-index --add --chmod=+x *[^.md]
