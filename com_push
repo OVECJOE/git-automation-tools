@@ -1,0 +1,14 @@
+#!/bin/bash
+# This script add files and driectories to the staging area,
+# commit them to the repo and push to the remote repo.
+
+# $1 - the first argument: the path to the working directory of the repo.
+# $2 - the second argument: message to commit.
+
+cd $1
+
+git update-index --add --chmod=+x *[^.md]
+git add -A; git commit -m "$2"
+git pull; git push
+
+# Note that this script will only work if there is an existing local repo.
