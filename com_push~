@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Navigate to the current working directory
+cd $1
+
+# Commit files and directories...
+git add .
+git commit -m "$2"
+
+# push to remote repo
+git push
