@@ -7,8 +7,9 @@
 rm -f *~
 cd $1
 
-git update-index --add --chmod=+x *[^.md]
-git add -A; git commit -m "$2"
-git pull; git push
+git add .
+git commit -ma $2
+git pull
+git push
 
 # Note that this script will only work if there is an existing local repo.
