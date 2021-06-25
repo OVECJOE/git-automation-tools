@@ -8,7 +8,7 @@ rm -f *~
 cd $1
 
 git add .
-git commit -ma $2
+git commit -m "$2"
 git pull
 git push
 
