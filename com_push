@@ -6,7 +6,7 @@
 # $2 - the second argument: message to commit.
 cd $1
 rm -f *~
-PWD=`exec pwd`
+PWD=$(pwd)
 
 git add .
 git commit -m "$2"
