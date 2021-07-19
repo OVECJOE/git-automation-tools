@@ -9,9 +9,8 @@ then
 	exit 1
 fi
 
-if ! git clone -q "https://github.com/$1/$2"
+if git clone -q "https://github.com/$1/$2"
 then
-	echo "Wrong username or repo name,\n\tOR\nNo internet connection."
-	exit -1
+	echo "$2 cloned successfully!"
+	exit 0
 fi
-exit 0
