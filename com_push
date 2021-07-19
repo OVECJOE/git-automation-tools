@@ -12,6 +12,6 @@ git add .
 git commit -m "$2"
 git pull && git push
 
-cd PWD
+cd $PWD
 
 # Note that this script will only work if there is an existing local repo.
