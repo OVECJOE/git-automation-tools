@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# $1 - GitHub username
+# $2 - The repository's name
+
+if [[ ! ($1 && $2) ]]
+then
+	echo "Error: Arguments required - 2"
+	exit 1
+fi
+
+if ! git clone -q "https://github.com/$1/$2"
+then
+	echo "Wrong username or repo name,\n\tOR\nNo internet connection."
+	exit -1
+fi
+exit 0
