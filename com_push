@@ -9,7 +9,8 @@ cd $1
 
 git add .
 git commit -m "$2"
-git pull
-git push
+git pull && git push
+
+cd -
 
 # Note that this script will only work if there is an existing local repo.
