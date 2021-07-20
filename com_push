@@ -4,12 +4,18 @@
 
 # $1 - the first argument: the path to the working directory of the repo.
 # $2 - the second argument: message to commit.
-cd $1
-rm -f *~
 PWD=$(pwd)
 
+if [ $1 ]
+then
+	cd $1
+else
+	echo "Error: Argument required: local repo's direcrory"
+	exit 1
+fi
+
 git add .
-git commit -m "$2"
+git commit
 git pull && git push
 
 cd $PWD
